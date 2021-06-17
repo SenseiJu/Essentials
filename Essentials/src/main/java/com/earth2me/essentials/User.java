@@ -211,7 +211,7 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
             return;
         }
         setMoney(getMoney().add(value), cause);
-        sendMessage(tl("addedToAccount", NumberUtil.displayCurrency(value, ess)));
+        //sendMessage(tl("addedToAccount", NumberUtil.displayCurrency(value, ess)));
         if (initiator != null) {
             initiator.sendMessage(tl("addedToOthersAccount", NumberUtil.displayCurrency(value, ess), this.getDisplayName(), NumberUtil.displayCurrency(getMoney(), ess)));
         }
